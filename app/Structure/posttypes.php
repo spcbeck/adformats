@@ -16,32 +16,33 @@ namespace Pixability\Theme\App\Structure;
 use function Pixability\Theme\App\config;
 
 /**
- * Registers `book` custom post type.
+ * Registers `adformat` custom post type.
  *
  * @return void
  */
-function register_book_post_type()
+function register_adformat_post_type()
 {
-    register_post_type('book', [
-        'description' => __('Collection of books.', config('textdomain')),
+    register_post_type('adformat', [
+        'description' => __('Collection of ad formats.', config('textdomain')),
         'public' => true,
         'supports' => ['title', 'editor', 'excerpt', 'thumbnail'],
         'labels' => [
-            'name' => _x('Books', 'post type general name', config('textdomain')),
-            'singular_name' => _x('Book', 'post type singular name', config('textdomain')),
-            'menu_name' => _x('Books', 'admin menu', config('textdomain')),
-            'name_admin_bar' => _x('Book', 'add new on admin bar', config('textdomain')),
-            'add_new' => _x('Add New', 'book', config('textdomain')),
-            'add_new_item' => __('Add New Book', config('textdomain')),
-            'new_item' => __('New Book', config('textdomain')),
-            'edit_item' => __('Edit Book', config('textdomain')),
-            'view_item' => __('View Book', config('textdomain')),
-            'all_items' => __('All Books', config('textdomain')),
-            'search_items' => __('Search Books', config('textdomain')),
-            'parent_item_colon' => __('Parent Books:', config('textdomain')),
-            'not_found' => __('No books found.', config('textdomain')),
-            'not_found_in_trash' => __('No books found in Trash.', config('textdomain')),
+            'name' => _x('Ad Format', 'post type general name', config('textdomain')),
+            'singular_name' => _x('Ad Format', 'post type singular name', config('textdomain')),
+            'menu_name' => _x('Ad Format', 'admin menu', config('textdomain')),
+            'name_admin_bar' => _x('Ad Format', 'add new on admin bar', config('textdomain')),
+            'add_new' => _x('Add New', 'adformat', config('textdomain')),
+            'add_new_item' => __('Add New Ad Format', config('textdomain')),
+            'new_item' => __('New Ad Format', config('textdomain')),
+            'edit_item' => __('Edit Ad Format', config('textdomain')),
+            'view_item' => __('View Ad Format', config('textdomain')),
+            'all_items' => __('All Ad Format', config('textdomain')),
+            'search_items' => __('Search Ad Format', config('textdomain')),
+            'parent_item_colon' => __('Parent Ad Format:', config('textdomain')),
+            'not_found' => __('No ad format found.', config('textdomain')),
+            'not_found_in_trash' => __('No ad format found in Trash.', config('textdomain')),
         ],
+        'taxonomies'  => array( 'category' ),
     ]);
 }
-add_action('init', 'Pixability\Theme\App\Structure\register_book_post_type');
+add_action('init', 'Pixability\Theme\App\Structure\register_adformat_post_type');
