@@ -22,6 +22,7 @@ namespace Pixability\Theme\App\Setup;
 if ( current_user_can( 'adformats_editor' ) ) {
 	function remove_menus(){
 	  
+	  remove_menu_page( 'index.php' );   
 	  remove_menu_page( 'edit.php' );                   //Posts
 	  remove_menu_page( 'edit-comments.php' );          //Comments
 	  remove_menu_page( 'tools.php' );                  //Tools
