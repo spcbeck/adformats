@@ -18,11 +18,6 @@ namespace Pixability\Theme\App\Setup;
  *
  * @return integer
  */
-function example_action()
-{
-    //
-}
-add_filter('excerpt_length', 'Pixability\Theme\App\Setup\example_action');
 
 if ( current_user_can( 'adformats_editor' ) ) {
 	function remove_menus(){
@@ -33,5 +28,5 @@ if ( current_user_can( 'adformats_editor' ) ) {
 	  remove_menu_page( 'options-general.php' );        //Settings
 	  
 	}
-	add_action( 'admin_menu', 'remove_menus' );
+	add_action( 'admin_menu', 'Pixability\Theme\App\Setup\remove_menus' );
 }
