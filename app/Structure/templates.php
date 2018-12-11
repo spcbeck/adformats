@@ -61,15 +61,3 @@ function render_sidebar()
 }
 add_action('theme/index/sidebar', 'Pixability\Theme\App\Structure\render_sidebar');
 add_action('theme/single/sidebar', 'Pixability\Theme\App\Structure\render_sidebar');
-
-/**
- * Renders [button] shortcode after homepage content.
- *
- * @uses resources/templates/shortcodes/button.tpl.php
- * @see resources/templates/partials/header.tpl.php
- */
-function render_documentation_button()
-{
-    echo do_shortcode("[button href='https://github.com/tonik/tonik']Checkout documentation →[/button]");
-}
-add_action('theme/header/end', 'Pixability\Theme\App\Structure\render_documentation_button');

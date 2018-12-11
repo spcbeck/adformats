@@ -30,4 +30,4 @@ if ( current_user_can( 'adformats_editor' ) ) {
 	  
 	}
 	add_action( 'admin_menu', 'Pixability\Theme\App\Setup\remove_menus' );
-}
+
