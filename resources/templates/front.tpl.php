@@ -10,7 +10,7 @@
         <div class="row align-items-center">
             <div class="col-md-5 text-white">
                 <h1 style="color: <?php echo $textColor; ?>"><?php the_field('title'); ?></h1>
-                <h2><?php the_field('subtitle'); ?></h2>
+                <h2 style="color: <?php echo $textColor; ?>"><?php the_field('subtitle'); ?></h2>
                 <p><?php the_field('paragraph_text'); ?></p>
                 <div class="d-flex hero-buttons">
                     <?php if( have_rows('hero_buttons') ): ?>
