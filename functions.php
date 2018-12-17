@@ -32,3 +32,5 @@ if ($ok) {
     // they must be under the same dir path.
     (new Tonik\Gin\Foundation\Autoloader($theme->get('config')))->register();
 }
+
+require_once('walker_nav_menu.php');

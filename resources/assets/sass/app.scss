@@ -4,6 +4,7 @@
 // settings, our own variables, mixins and functions.
 @import 'settings';
 @import 'variables';
+@import 'header';
 
 // Components
 // ==============================================================
@@ -226,4 +227,107 @@ p {
   font-size: 1rem;
   line-height: 1.5;
   letter-spacing: .25px;
+}
+
+.hero {
+  align-items: baseline;
+  background-size: cover !important;
+  display: flex;
+  margin-bottom: 2em;
+  min-height: 500px;
+  background-repeat: no-repeat;
+  padding-top: 66px;
+
+  & > .container {
+    margin-top: 5em;
+    margin-bottom: 3em;
+  }
+
+  &.red {
+    background: $red;
+  }
+
+  &.blue {
+    background: $blue;
+  }
+
+  &.dark-blue {
+    background: $dark-blue;
+  }
+
+  h1 {
+    color: #000;
+    font-size: .75rem;;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
+  }
+
+  h2 {
+    font-size: 3.15rem;
+    font-weight: bold;
+  }
+
+  svg.hr,
+  img.hr {
+    height: 13px;
+    margin: 1.5em 0;
+    width: 80px;
+  }
+
+  p {
+    font-size: 1.5rem;
+    font-weight: 200;
+  }
+
+  &.hero-centered {
+    hr {
+      margin: 2em auto;
+    }
+
+    .hero-buttons {
+      justify-content: center;
+    }
+  }
+
+  .hero-buttons {
+    a {
+      margin-left: 1.5rem;
+      margin-right: 1.5rem;
+    }
+
+    a:first-child {
+      margin-left: 0;
+    }
+  }
+
+  .featured-posts {
+    h3 {
+      text-transform: uppercase;
+      font-size: 0.875rem;
+      font-weight: bold;
+    }
+
+    p {
+      font-size: 1.0625rem;
+      margin-bottom: 30px;
+    }
+  }
+
+  a.btn {
+    -webkit-box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.4);
+    -moz-box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.4);
+    box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.4);
+    padding: 1em;
+
+    &.btn-arrow {
+      background-position: 94% center;
+      padding-right: 3em;
+    }
+  }
+
+  .jarallax-img {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
 }
