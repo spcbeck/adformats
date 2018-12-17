@@ -337,6 +337,10 @@ p {
   height: auto;
 }
 
+.back {
+  border-top: 10px solid $red;
+}
+
 .card-flip {
   perspective: 1000px;
   &:hover .flip,

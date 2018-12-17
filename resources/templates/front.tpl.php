@@ -75,6 +75,132 @@
                 <?php wp_reset_query(); ?>
         </div>
         <div class="row">
+            <?php
+                $args = array(
+                  'post_type' => 'adformat',
+                  'category_name' => 'youtube'
+                );
+                $loop = new WP_Query( $args );
+
+                while ( $loop->have_posts() ) : $loop->the_post();?>
+                    <div class="col-md-4">
+                        <div class="card-flip">
+                            <div class="flip">
+                                <div class="front">
+                                    <div class="card adformat">
+                                        <div class="card-body text-center">
+                                            <h3><?php the_title(); ?></h3>
+                                            <hr>
+                                            <p>
+                                                <?php the_excerpt() ?>
+                                            </p>
+                                        </div>
+                                        <?php
+                                            if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
+                                                the_post_thumbnail( 'full', array( 'class'  => 'card-img-bottom' ) ); // show featured image
+                                            } 
+                                        ?>
+                                    </div>
+                                </div>
+                                <div class="back">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <h3><?php the_title(); ?></h3>
+                                            <hr>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <?php endwhile; ?>
+                <?php wp_reset_query(); ?>
+        </div>
+        <div class="row">
+            <?php
+                $args = array(
+                  'post_type' => 'adformat',
+                  'category_name' => 'hulu'
+                );
+                $loop = new WP_Query( $args );
+
+                while ( $loop->have_posts() ) : $loop->the_post();?>
+                    <div class="col-md-4">
+                        <div class="card-flip">
+                            <div class="flip">
+                                <div class="front">
+                                    <div class="card adformat">
+                                        <div class="card-body text-center">
+                                            <h3><?php the_title(); ?></h3>
+                                            <hr>
+                                            <p>
+                                                <?php the_excerpt() ?>
+                                            </p>
+                                        </div>
+                                        <?php
+                                            if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
+                                                the_post_thumbnail( 'full', array( 'class'  => 'card-img-bottom' ) ); // show featured image
+                                            } 
+                                        ?>
+                                    </div>
+                                </div>
+                                <div class="back">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <h3><?php the_title(); ?></h3>
+                                            <hr>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <?php endwhile; ?>
+                <?php wp_reset_query(); ?>
+        </div>
+        <div class="row">
+            <?php
+                $args = array(
+                  'post_type' => 'adformat',
+                  'category_name' => 'instagram'
+                );
+                $loop = new WP_Query( $args );
+
+                while ( $loop->have_posts() ) : $loop->the_post();?>
+                    <div class="col-md-4">
+                        <div class="card-flip">
+                            <div class="flip">
+                                <div class="front">
+                                    <div class="card adformat">
+                                        <div class="card-body text-center">
+                                            <h3><?php the_title(); ?></h3>
+                                            <hr>
+                                            <p>
+                                                <?php the_excerpt() ?>
+                                            </p>
+                                        </div>
+                                        <?php
+                                            if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
+                                                the_post_thumbnail( 'full', array( 'class'  => 'card-img-bottom' ) ); // show featured image
+                                            } 
+                                        ?>
+                                    </div>
+                                </div>
+                                <div class="back">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <h3><?php the_title(); ?></h3>
+                                            <hr>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <?php endwhile; ?>
+                <?php wp_reset_query(); ?>
+        </div>
+        <div class="row">
             <div class="col">
                 <?php if (have_posts()) : ?>
                     <?php while (have_posts()) : the_post() ?>
