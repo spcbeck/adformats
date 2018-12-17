@@ -1,12 +1,8 @@
 <?php get_header(); ?>
 <?php 
-    if(the_field('text_color')){
-        $textColor = get_field('text_color');
-        $hrColor = get_field('text_color');
-    } else {
-        $textColor = '#fff';
-        $hrColor = '#1a9ba5';
-    }
+    $textColor = '#000';
+    $hrColor = '#1a9ba5';
+
 ?>
 
 <section id="hero" class="hero <?php if(has_post_thumbnail()): ?>jarallax<?php endif; ?>" <?php if(has_post_thumbnail()): ?> style="background-image: url('<?php the_post_thumbnail_url( 'large' ); ?>');" <?php endif; ?>>
