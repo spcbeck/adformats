@@ -1,12 +1,23 @@
 <?php get_header(); ?>
+
+
+<?php
+    /**
+     * Functions hooked into `theme/index/header` action.
+     *
+     * @hooked Pixability\Theme\Index\render_header - 10
+     */
+    do_action('theme/index/header');
+?>
+
 <?php 
     $textColor = '#000';
     $hrColor = '#1a9ba5';
 
 ?>
 
-<section id="hero" class="hero <?php if(has_post_thumbnail()): ?>jarallax<?php endif; ?>" <?php if(has_post_thumbnail()): ?> style="background-image: url('<?php the_post_thumbnail_url( 'large' ); ?>');" <?php endif; ?>>
-    <div class="container">
+<section id="hero" class="hero <?php if(has_post_thumbnail()): ?>jarallax<?php endif; ?>">
+    <div class="container" style="background-image: url('https://adformats.pixability.com/wp-content/uploads/2018/12/dot-bg-grey-1024x312.png');">
         <div class="row align-items-center">
             <div class="col-md-5 text-white">
                 <h1 style="color: <?php echo $textColor; ?>"><?php the_field('title'); ?></h1>
@@ -28,6 +39,7 @@
             </div>
         </div>
     </div>
+    <img class="jarallax-img" src="<?php the_post_thumbnail_url( 'large' ); ?>"/>
 </section>
 
 <section class="section">
@@ -80,7 +92,7 @@
                                                         foreach($categories as $category) {
                                                             if($category->parent == $categoryparent->term_id ) {
                                                          ?>
-                                                            <span><?php echo $category->name ?></span>
+                                                            <span class="badge badge-secondary"><?php echo $category->name ?></span>
 
                                                         <?php 
                                                         }
@@ -132,32 +144,6 @@
                                         <div class="card-body">
                                             <h3><?php the_title(); ?></h3>
                                             <hr>
-                                           <div class="categoryparents">
-                                                <?php
-                                                $args = array(
-                                                  'orderby' => 'name',
-                                                  'order' => 'ASC',
-                                                  'parent' => 0
-                                                );
-                                                $categoriesparents = get_categories($args);
-                                                foreach( $categoriesparents as $category ) {
-                                                    echo $category;
-                                                }
-                                                ?>
-                                            </div>
-
-                                            <div class="selectedcategories">
-                                            <?php
-                                                $categories = get_the_category();
-
-                                                // now you can view your category in array:
-                                                // using var_dump( $categories );
-                                                // or you can take all with foreach:
-                                                foreach( $categories as $category ) {
-                                                    echo $category->term_id . ', ' . $category->slug . ', ' . $category->name . '<br />';
-                                                }
-                                                ?>
-                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -200,15 +186,7 @@
                                         <div class="card-body">
                                             <h3><?php the_title(); ?></h3>
                                             <hr>
-                                            <?php
-                                            $categories = get_the_category();
-                                            // now you can view your category in array:
-                                            // using var_dump( $categories );
-                                            // or you can take all with foreach:
-                                            foreach( $categories as $category ) {
-                                                echo $category->term_id . ', ' . $category->slug . ', ' . $category->name . '<br />';
-                                            }
-                                            ?>
+                                           
                                         </div>
                                     </div>
                                 </div>
@@ -251,15 +229,7 @@
                                         <div class="card-body">
                                             <h3><?php the_title(); ?></h3>
                                             <hr>
-                                            <?php
-                                            $categories = get_the_category();
-                                            // now you can view your category in array:
-                                            // using var_dump( $categories );
-                                            // or you can take all with foreach:
-                                            foreach( $categories as $category ) {
-                                                echo $category->term_id . ', ' . $category->slug . ', ' . $category->name . '<br />';
-                                            }
-                                            ?>
+                                           
                                         </div>
                                     </div>
                                 </div>
