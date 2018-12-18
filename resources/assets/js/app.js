@@ -15,5 +15,8 @@ $(document).ready(function() {
     else 
       $(this).height(backHeight);
   })
-    console.log("yeah");
+
+  $('.card-flip').click(function() {
+    $(this).toggleClass('hover');
+  });
 })

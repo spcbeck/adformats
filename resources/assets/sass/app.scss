@@ -343,7 +343,6 @@ p {
 
 .card-flip {
   perspective: 1000px;
-  &:hover .flip,
   &.hover .flip {
     transform: rotateY(180deg);
   }
@@ -376,10 +375,6 @@ p {
 
 .back {
   transform: rotateY(180deg);
-}
-
-.row {
-  height: 500px;
 }
 
 .col-md-4:nth-child(2n+1) {

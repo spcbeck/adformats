@@ -45,9 +45,11 @@
 <section class="section">
     <div class="container">
         <div class="row clearfix">
+            <h2>Facebook</h2>
             <?php
                 $args = array(
                   'post_type' => 'adformat',
+                  'category_name' => 'facebook'
                 );
                 $loop = new WP_Query( $args );
 
@@ -112,6 +114,7 @@
                 <?php wp_reset_query(); ?>
         </div>
         <div class="row clearfix">
+            <h2>YouTube</h2>
             <?php
                 $args = array(
                   'post_type' => 'adformat',
@@ -144,6 +147,32 @@
                                         <div class="card-body">
                                             <h3><?php the_title(); ?></h3>
                                             <hr>
+                                            <div class="categoryparents">
+                                                <?php
+                                                $args = array(
+                                                  'orderby' => 'name',
+                                                  'order' => 'ASC',
+                                                  'parent' => 0
+                                                );
+                                                $categoriesparents = get_categories($args);
+                                                foreach ( $categoriesparents as $categoryparent ): ?>
+                                                    <h4><?php echo $categoryparent->name ?></h4>
+                                                    <?php
+
+                                                        $categories = get_the_category();
+                                                        foreach($categories as $category) {
+                                                            if($category->parent == $categoryparent->term_id ) {
+                                                         ?>
+                                                            <span class="badge badge-secondary"><?php echo $category->name ?></span>
+
+                                                        <?php 
+                                                        }
+                                                    } ?>
+                                                
+                                                <?php
+                                                    endforeach;
+                                                ?>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -154,6 +183,7 @@
                 <?php wp_reset_query(); ?>
         </div>
         <div class="row clearfix">
+            <h2>Hulu</h2>
             <?php
                 $args = array(
                   'post_type' => 'adformat',
@@ -186,6 +216,32 @@
                                         <div class="card-body">
                                             <h3><?php the_title(); ?></h3>
                                             <hr>
+                                            <div class="categoryparents">
+                                                <?php
+                                                $args = array(
+                                                  'orderby' => 'name',
+                                                  'order' => 'ASC',
+                                                  'parent' => 0
+                                                );
+                                                $categoriesparents = get_categories($args);
+                                                foreach ( $categoriesparents as $categoryparent ): ?>
+                                                    <h4><?php echo $categoryparent->name ?></h4>
+                                                    <?php
+
+                                                        $categories = get_the_category();
+                                                        foreach($categories as $category) {
+                                                            if($category->parent == $categoryparent->term_id ) {
+                                                         ?>
+                                                            <span class="badge badge-secondary"><?php echo $category->name ?></span>
+
+                                                        <?php 
+                                                        }
+                                                    } ?>
+                                                
+                                                <?php
+                                                    endforeach;
+                                                ?>
+                                            </div>
                                            
                                         </div>
                                     </div>
@@ -197,6 +253,7 @@
                 <?php wp_reset_query(); ?>
         </div>
         <div class="row">
+            <h2>Instagram</h2>
             <?php
                 $args = array(
                   'post_type' => 'adformat',
@@ -229,6 +286,314 @@
                                         <div class="card-body">
                                             <h3><?php the_title(); ?></h3>
                                             <hr>
+                                            <div class="categoryparents">
+                                                <?php
+                                                $args = array(
+                                                  'orderby' => 'name',
+                                                  'order' => 'ASC',
+                                                  'parent' => 0
+                                                );
+                                                $categoriesparents = get_categories($args);
+                                                foreach ( $categoriesparents as $categoryparent ): ?>
+                                                    <h4><?php echo $categoryparent->name ?></h4>
+                                                    <?php
+
+                                                        $categories = get_the_category();
+                                                        foreach($categories as $category) {
+                                                            if($category->parent == $categoryparent->term_id ) {
+                                                         ?>
+                                                            <span class="badge badge-secondary"><?php echo $category->name ?></span>
+
+                                                        <?php 
+                                                        }
+                                                    } ?>
+                                                
+                                                <?php
+                                                    endforeach;
+                                                ?>
+                                            </div>
+                                           
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <?php endwhile; ?>
+                <?php wp_reset_query(); ?>
+        </div>
+        <div class="row">
+            <h2>Amazon</h2>
+            <?php
+                $args = array(
+                  'post_type' => 'adformat',
+                  'category_name' => 'amazon'
+                );
+                $loop = new WP_Query( $args );
+
+                while ( $loop->have_posts() ) : $loop->the_post();?>
+                    <div class="col-md-4">
+                        <div class="card-flip">
+                            <div class="flip">
+                                <div class="front">
+                                    <div class="card adformat">
+                                        <div class="card-body text-center">
+                                            <h3><?php the_title(); ?></h3>
+                                            <hr>
+                                            <p>
+                                                <?php the_excerpt() ?>
+                                            </p>
+                                        </div>
+                                        <?php
+                                            if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
+                                                the_post_thumbnail( 'full', array( 'class'  => 'card-img-bottom' ) ); // show featured image
+                                            } 
+                                        ?>
+                                    </div>
+                                </div>
+                                <div class="back">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <h3><?php the_title(); ?></h3>
+                                            <hr>
+                                            <div class="categoryparents">
+                                                <?php
+                                                $args = array(
+                                                  'orderby' => 'name',
+                                                  'order' => 'ASC',
+                                                  'parent' => 0
+                                                );
+                                                $categoriesparents = get_categories($args);
+                                                foreach ( $categoriesparents as $categoryparent ): ?>
+                                                    <h4><?php echo $categoryparent->name ?></h4>
+                                                    <?php
+
+                                                        $categories = get_the_category();
+                                                        foreach($categories as $category) {
+                                                            if($category->parent == $categoryparent->term_id ) {
+                                                         ?>
+                                                            <span class="badge badge-secondary"><?php echo $category->name ?></span>
+
+                                                        <?php 
+                                                        }
+                                                    } ?>
+                                                
+                                                <?php
+                                                    endforeach;
+                                                ?>
+                                            </div>
+                                           
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <?php endwhile; ?>
+                <?php wp_reset_query(); ?>
+        </div>
+
+        <div class="row">
+            <h2>Roku</h2>
+            <?php
+                $args = array(
+                  'post_type' => 'adformat',
+                  'category_name' => 'roku'
+                );
+                $loop = new WP_Query( $args );
+
+                while ( $loop->have_posts() ) : $loop->the_post();?>
+                    <div class="col-md-4">
+                        <div class="card-flip">
+                            <div class="flip">
+                                <div class="front">
+                                    <div class="card adformat">
+                                        <div class="card-body text-center">
+                                            <h3><?php the_title(); ?></h3>
+                                            <hr>
+                                            <p>
+                                                <?php the_excerpt() ?>
+                                            </p>
+                                        </div>
+                                        <?php
+                                            if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
+                                                the_post_thumbnail( 'full', array( 'class'  => 'card-img-bottom' ) ); // show featured image
+                                            } 
+                                        ?>
+                                    </div>
+                                </div>
+                                <div class="back">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <h3><?php the_title(); ?></h3>
+                                            <hr>
+                                            <div class="categoryparents">
+                                                <?php
+                                                $args = array(
+                                                  'orderby' => 'name',
+                                                  'order' => 'ASC',
+                                                  'parent' => 0
+                                                );
+                                                $categoriesparents = get_categories($args);
+                                                foreach ( $categoriesparents as $categoryparent ): ?>
+                                                    <h4><?php echo $categoryparent->name ?></h4>
+                                                    <?php
+
+                                                        $categories = get_the_category();
+                                                        foreach($categories as $category) {
+                                                            if($category->parent == $categoryparent->term_id ) {
+                                                         ?>
+                                                            <span class="badge badge-secondary"><?php echo $category->name ?></span>
+
+                                                        <?php 
+                                                        }
+                                                    } ?>
+                                                
+                                                <?php
+                                                    endforeach;
+                                                ?>
+                                            </div>
+                                           
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <?php endwhile; ?>
+                <?php wp_reset_query(); ?>
+        </div>
+
+        <div class="row">
+            <h2>Snapchat</h2>
+            <?php
+                $args = array(
+                  'post_type' => 'adformat',
+                  'category_name' => 'snapchat'
+                );
+                $loop = new WP_Query( $args );
+
+                while ( $loop->have_posts() ) : $loop->the_post();?>
+                    <div class="col-md-4">
+                        <div class="card-flip">
+                            <div class="flip">
+                                <div class="front">
+                                    <div class="card adformat">
+                                        <div class="card-body text-center">
+                                            <h3><?php the_title(); ?></h3>
+                                            <hr>
+                                            <p>
+                                                <?php the_excerpt() ?>
+                                            </p>
+                                        </div>
+                                        <?php
+                                            if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
+                                                the_post_thumbnail( 'full', array( 'class'  => 'card-img-bottom' ) ); // show featured image
+                                            } 
+                                        ?>
+                                    </div>
+                                </div>
+                                <div class="back">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <h3><?php the_title(); ?></h3>
+                                            <hr>
+                                            <div class="categoryparents">
+                                                <?php
+                                                $args = array(
+                                                  'orderby' => 'name',
+                                                  'order' => 'ASC',
+                                                  'parent' => 0
+                                                );
+                                                $categoriesparents = get_categories($args);
+                                                foreach ( $categoriesparents as $categoryparent ): ?>
+                                                    <h4><?php echo $categoryparent->name ?></h4>
+                                                    <?php
+
+                                                        $categories = get_the_category();
+                                                        foreach($categories as $category) {
+                                                            if($category->parent == $categoryparent->term_id ) {
+                                                         ?>
+                                                            <span class="badge badge-secondary"><?php echo $category->name ?></span>
+
+                                                        <?php 
+                                                        }
+                                                    } ?>
+                                                
+                                                <?php
+                                                    endforeach;
+                                                ?>
+                                            </div>
+                                           
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <?php endwhile; ?>
+                <?php wp_reset_query(); ?>
+        </div>
+        <div class="row">
+            <h2>SpotX</h2>
+            <?php
+                $args = array(
+                  'post_type' => 'adformat',
+                  'category_name' => 'spotx'
+                );
+                $loop = new WP_Query( $args );
+
+                while ( $loop->have_posts() ) : $loop->the_post();?>
+                    <div class="col-md-4">
+                        <div class="card-flip">
+                            <div class="flip">
+                                <div class="front">
+                                    <div class="card adformat">
+                                        <div class="card-body text-center">
+                                            <h3><?php the_title(); ?></h3>
+                                            <hr>
+                                            <p>
+                                                <?php the_excerpt() ?>
+                                            </p>
+                                        </div>
+                                        <?php
+                                            if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
+                                                the_post_thumbnail( 'full', array( 'class'  => 'card-img-bottom' ) ); // show featured image
+                                            } 
+                                        ?>
+                                    </div>
+                                </div>
+                                <div class="back">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <h3><?php the_title(); ?></h3>
+                                            <hr>
+                                            <div class="categoryparents">
+                                                <?php
+                                                $args = array(
+                                                  'orderby' => 'name',
+                                                  'order' => 'ASC',
+                                                  'parent' => 0
+                                                );
+                                                $categoriesparents = get_categories($args);
+                                                foreach ( $categoriesparents as $categoryparent ): ?>
+                                                    <h4><?php echo $categoryparent->name ?></h4>
+                                                    <?php
+
+                                                        $categories = get_the_category();
+                                                        foreach($categories as $category) {
+                                                            if($category->parent == $categoryparent->term_id ) {
+                                                         ?>
+                                                            <span class="badge badge-secondary"><?php echo $category->name ?></span>
+
+                                                        <?php 
+                                                        }
+                                                    } ?>
+                                                
+                                                <?php
+                                                    endforeach;
+                                                ?>
+                                            </div>
                                            
                                         </div>
                                     </div>
