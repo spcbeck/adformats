@@ -5,7 +5,7 @@
 
 ?>
 
-<section id="hero" class="hero <?php if(has_post_thumbnail()): ?>jarallax<?php endif; ?>">
+<section id="hero" class="hero <?php if(has_post_thumbnail()): ?>jarallax<?php endif; ?>" <?php if(has_post_thumbnail()): ?> style="background-image: url('<?php the_post_thumbnail_url( 'large' ); ?>');" <?php endif; ?>>
     <div class="container">
         <div class="row align-items-center">
             <div class="col-md-5 text-white">
@@ -28,7 +28,6 @@
             </div>
         </div>
     </div>
-    <img class="jarallax-img" src="<?php the_post_thumbnail_url( 'large' ); ?>"/>
 </section>
 
 <section class="section">
