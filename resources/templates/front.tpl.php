@@ -42,7 +42,27 @@
     <img class="jarallax-img" src="<?php the_post_thumbnail_url( 'large' ); ?>"/>
 </section>
 
-<section class="section">
+<section class="filters">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="p-4 bg-light">
+                    <?php
+                    $args = array(
+                      'child_of' => 2,
+                      'hide_empty' => 0
+                    );
+                    $categories = get_categories($args);
+                    foreach ( $categories as $platform ): ?>
+                        <?php echo '<a class="btn btn-secondary" href="#' . $platform->slug . '">' . $platform->name . '</a>' ?>
+                    <?php endforeach; ?>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section" id="facebook">
     <div class="container">
         <div class="row">
             <div class="col">
@@ -117,7 +137,7 @@
                 <?php endwhile; ?>
                 <?php wp_reset_query(); ?>
         </div>
-        <div class="row">
+        <div class="row"  id="youtube">
             <div class="col">
                 <h2>YouTube</h2>
             </div>
@@ -190,7 +210,7 @@
                 <?php endwhile; ?>
                 <?php wp_reset_query(); ?>
         </div>
-        <div class="row">
+        <div class="row" id="hulu">
             <div class="col">
                 <h2>Hulu</h2>
             </div>
@@ -264,7 +284,7 @@
                 <?php endwhile; ?>
                 <?php wp_reset_query(); ?>
         </div>
-        <div class="row">
+        <div class="row" id="instagram">
             <div class="col">
                 <h2>Instagram</h2>
             </div>
@@ -338,7 +358,7 @@
                 <?php endwhile; ?>
                 <?php wp_reset_query(); ?>
         </div>
-        <div class="row">
+        <div class="row" id="amazon">
             <div class="col">
                 <h2>Amazon</h2>
             </div>
@@ -412,7 +432,7 @@
                 <?php endwhile; ?>
                 <?php wp_reset_query(); ?>
         </div>
-        <div class="row">
+        <div class="row" id="roku">
             <div class="col">
                 <h2>Roku</h2>
             </div>
@@ -486,7 +506,7 @@
                 <?php endwhile; ?>
                 <?php wp_reset_query(); ?>
         </div>
-        <div class="row">
+        <div class="row" id="snapchat">
             <div class="col">
                 <h2>Snapchat</h2>
             </div>
@@ -560,7 +580,7 @@
                 <?php endwhile; ?>
                 <?php wp_reset_query(); ?>
         </div>
-        <div class="row">
+        <div class="row" id="spotx">
             <div class="col">
                 <h2>SpotX</h2>
             </div>
