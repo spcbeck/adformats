@@ -5,7 +5,7 @@
 
 ?>
 
-<section id="hero" class="hero <?php if(has_post_thumbnail()): ?>jarallax<?php endif; ?>" <?php if(has_post_thumbnail()): ?> style="background-image: url('<?php the_post_thumbnail_url( 'large' ); ?>');" <?php endif; ?>>
+<section id="hero" class="hero <?php if(has_post_thumbnail()): ?>jarallax<?php endif; ?>">
     <div class="container">
         <div class="row align-items-center">
             <div class="col-md-5 text-white">
@@ -28,15 +28,15 @@
             </div>
         </div>
     </div>
+    <img class="jarallax-img" src="<?php the_post_thumbnail_url( 'large' ); ?>"/>
 </section>
 
 <section class="section">
     <div class="container">
-        <div class="row">
+        <div class="row clearfix">
             <?php
                 $args = array(
                   'post_type' => 'adformat',
-                  'category_name' => 'facebook'
                 );
                 $loop = new WP_Query( $args );
 
@@ -65,6 +65,32 @@
                                         <div class="card-body">
                                             <h3><?php the_title(); ?></h3>
                                             <hr>
+                                            <div class="categoryparents">
+                                                <?php
+                                                $args = array(
+                                                  'orderby' => 'name',
+                                                  'order' => 'ASC',
+                                                  'parent' => 0
+                                                );
+                                                $categoriesparents = get_categories($args);
+                                                foreach ( $categoriesparents as $categoryparent ): ?>
+                                                    <h4><?php echo $categoryparent->name ?></h4>
+                                                    <?php
+
+                                                        $categories = get_the_category();
+                                                        foreach($categories as $category) {
+                                                            if($category->parent == $categoryparent->term_id ) {
+                                                         ?>
+                                                            <span><?php echo $category->name ?></span>
+
+                                                        <?php 
+                                                        }
+                                                    } ?>
+                                                
+                                                <?php
+                                                    endforeach;
+                                                ?>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -74,7 +100,7 @@
                 <?php endwhile; ?>
                 <?php wp_reset_query(); ?>
         </div>
-        <div class="row">
+        <div class="row clearfix">
             <?php
                 $args = array(
                   'post_type' => 'adformat',
@@ -107,6 +133,32 @@
                                         <div class="card-body">
                                             <h3><?php the_title(); ?></h3>
                                             <hr>
+                                           <div class="categoryparents">
+                                                <?php
+                                                $args = array(
+                                                  'orderby' => 'name',
+                                                  'order' => 'ASC',
+                                                  'parent' => 0
+                                                );
+                                                $categoriesparents = get_categories($args);
+                                                foreach( $categoriesparents as $category ) {
+                                                    echo $category;
+                                                }
+                                                ?>
+                                            </div>
+
+                                            <div class="selectedcategories">
+                                            <?php
+                                                $categories = get_the_category();
+
+                                                // now you can view your category in array:
+                                                // using var_dump( $categories );
+                                                // or you can take all with foreach:
+                                                foreach( $categories as $category ) {
+                                                    echo $category->term_id . ', ' . $category->slug . ', ' . $category->name . '<br />';
+                                                }
+                                                ?>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -116,7 +168,7 @@
                 <?php endwhile; ?>
                 <?php wp_reset_query(); ?>
         </div>
-        <div class="row">
+        <div class="row clearfix">
             <?php
                 $args = array(
                   'post_type' => 'adformat',
@@ -149,6 +201,15 @@
                                         <div class="card-body">
                                             <h3><?php the_title(); ?></h3>
                                             <hr>
+                                            <?php
+                                            $categories = get_the_category();
+                                            // now you can view your category in array:
+                                            // using var_dump( $categories );
+                                            // or you can take all with foreach:
+                                            foreach( $categories as $category ) {
+                                                echo $category->term_id . ', ' . $category->slug . ', ' . $category->name . '<br />';
+                                            }
+                                            ?>
                                         </div>
                                     </div>
                                 </div>
@@ -191,6 +252,15 @@
                                         <div class="card-body">
                                             <h3><?php the_title(); ?></h3>
                                             <hr>
+                                            <?php
+                                            $categories = get_the_category();
+                                            // now you can view your category in array:
+                                            // using var_dump( $categories );
+                                            // or you can take all with foreach:
+                                            foreach( $categories as $category ) {
+                                                echo $category->term_id . ', ' . $category->slug . ', ' . $category->name . '<br />';
+                                            }
+                                            ?>
                                         </div>
                                     </div>
                                 </div>

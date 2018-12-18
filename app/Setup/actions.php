@@ -37,3 +37,9 @@ function my_login_stylesheet() {
     wp_enqueue_script('custom-js', get_template_directory_uri() . "/public/js/app.js", ['jquery'], null, true);
 }
 add_action( 'login_enqueue_scripts', 'Pixability\Theme\App\Setup\my_login_stylesheet' );
+
+function my_enqueue($hook) {
+    wp_enqueue_script('category_script', get_template_directory_uri() . '/resources/assets/js/categories.js', ['jquery']);
+}
+
+add_action('admin_enqueue_scripts', 'Pixability\Theme\App\Setup\my_enqueue');
