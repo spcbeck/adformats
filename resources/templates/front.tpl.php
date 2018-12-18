@@ -44,8 +44,12 @@
 
 <section class="section">
     <div class="container">
+        <div class="row">
+            <div class="col">
+                <h2>Facebook</h2>
+            </div>
+        </div>
         <div class="row clearfix">
-            <h2>Facebook</h2>
             <?php
                 $args = array(
                   'post_type' => 'adformat',
@@ -113,8 +117,12 @@
                 <?php endwhile; ?>
                 <?php wp_reset_query(); ?>
         </div>
+        <div class="row">
+            <div class="col">
+                <h2>YouTube</h2>
+            </div>
+        </div>
         <div class="row clearfix">
-            <h2>YouTube</h2>
             <?php
                 $args = array(
                   'post_type' => 'adformat',
@@ -182,8 +190,12 @@
                 <?php endwhile; ?>
                 <?php wp_reset_query(); ?>
         </div>
+        <div class="row">
+            <div class="col">
+                <h2>Hulu</h2>
+            </div>
+        </div>
         <div class="row clearfix">
-            <h2>Hulu</h2>
             <?php
                 $args = array(
                   'post_type' => 'adformat',
@@ -253,7 +265,11 @@
                 <?php wp_reset_query(); ?>
         </div>
         <div class="row">
-            <h2>Instagram</h2>
+            <div class="col">
+                <h2>Instagram</h2>
+            </div>
+        </div>
+        <div class="row">
             <?php
                 $args = array(
                   'post_type' => 'adformat',
@@ -323,7 +339,11 @@
                 <?php wp_reset_query(); ?>
         </div>
         <div class="row">
-            <h2>Amazon</h2>
+            <div class="col">
+                <h2>Amazon</h2>
+            </div>
+        </div>
+        <div class="row">
             <?php
                 $args = array(
                   'post_type' => 'adformat',
@@ -392,9 +412,12 @@
                 <?php endwhile; ?>
                 <?php wp_reset_query(); ?>
         </div>
-
         <div class="row">
-            <h2>Roku</h2>
+            <div class="col">
+                <h2>Roku</h2>
+            </div>
+        </div>
+        <div class="row">
             <?php
                 $args = array(
                   'post_type' => 'adformat',
@@ -463,9 +486,12 @@
                 <?php endwhile; ?>
                 <?php wp_reset_query(); ?>
         </div>
-
         <div class="row">
-            <h2>Snapchat</h2>
+            <div class="col">
+                <h2>Snapchat</h2>
+            </div>
+        </div>
+        <div class="row">
             <?php
                 $args = array(
                   'post_type' => 'adformat',
@@ -535,7 +561,11 @@
                 <?php wp_reset_query(); ?>
         </div>
         <div class="row">
-            <h2>SpotX</h2>
+            <div class="col">
+                <h2>SpotX</h2>
+            </div>
+        </div>
+        <div class="row">
             <?php
                 $args = array(
                   'post_type' => 'adformat',
