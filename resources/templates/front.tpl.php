@@ -286,7 +286,7 @@
         </div>
         <div class="row" id="instagram">
             <div class="col">
-                <h2><img src="http://adformats.pixability.com/wp-content/uploads/2018/12/instagram-logo.png" alt="Instagram"> | Adformats</h2>
+                <h2><img src="http://adformats.pixability.com/wp-content/uploads/2018/12/instagram-logo.png" alt="Instagram"> | Ad Formats</h2>
             </div>
         </div>
         <div class="row">
