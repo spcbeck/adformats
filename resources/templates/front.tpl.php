@@ -16,30 +16,32 @@
 
 ?>
 
-<section id="hero" class="hero <?php if(has_post_thumbnail()): ?>jarallax<?php endif; ?>">
-    <div class="container" style="background-image: url('https://adformats.pixability.com/wp-content/uploads/2018/12/dot-bg-grey-1024x312.png');">
-        <div class="row align-items-center">
-            <div class="col-md-5 text-white">
-                <h1 style="color: <?php echo $textColor; ?>"><?php the_field('title'); ?></h1>
-                <h2 style="color: <?php echo $textColor; ?>"><?php the_field('subtitle'); ?></h2>
-                <p><?php the_field('paragraph_text'); ?></p>
-                <div class="d-flex hero-buttons">
-                    <?php if( have_rows('hero_buttons') ): ?>
-                        <?php while( have_rows('hero_buttons') ): the_row(); 
+<section id="hero" style="background-image: url('https://adformats.pixability.com/wp-content/uploads/2018/12/dot-bg-grey-1024x312.png');">
+    <div class="hero <?php if(has_post_thumbnail()): ?>jarallax<?php endif; ?>">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-5 text-white">
+                    <h1 style="color: <?php echo $textColor; ?>"><?php the_field('title'); ?></h1>
+                    <h2 style="color: <?php echo $textColor; ?>"><?php the_field('subtitle'); ?></h2>
+                    <p><?php the_field('paragraph_text'); ?></p>
+                    <div class="d-flex hero-buttons">
+                        <?php if( have_rows('hero_buttons') ): ?>
+                            <?php while( have_rows('hero_buttons') ): the_row(); 
 
-                            // vars
-                            $url = get_sub_field('hero_button');
-                            $button = get_sub_field('hero_button_text');
+                                // vars
+                                $url = get_sub_field('hero_button');
+                                $button = get_sub_field('hero_button_text');
 
-                            ?>
-                            <a class="btn btn-outline-light" href="<?php echo $url ?>"><?php echo $button ?></a>
-                        <?php endwhile; ?>
-                    <?php endif; ?>
+                                ?>
+                                <a class="btn btn-outline-light" href="<?php echo $url ?>"><?php echo $button ?></a>
+                            <?php endwhile; ?>
+                        <?php endif; ?>
+                    </div>
                 </div>
             </div>
         </div>
+        <img class="jarallax-img" src="<?php the_post_thumbnail_url( 'large' ); ?>"/>
     </div>
-    <img class="jarallax-img" src="<?php the_post_thumbnail_url( 'large' ); ?>"/>
 </section>
 
 <section class="filters">
@@ -210,7 +212,7 @@
         </div>
         <div class="row" id="hulu">
             <div class="col">
-                <img src="" alt=""> <h2>Hulu</h2>
+                <h2><img src="http://adformats.pixability.com/wp-content/uploads/2018/12/hulu-logo.png" alt="Hulu"> | Ad Formats</h2>
             </div>
         </div>
         <div class="row clearfix">
