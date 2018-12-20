@@ -44,20 +44,18 @@
 
 <section class="filters">
     <div class="container">
-        <div class="row">
-            <div class="col">
-                <div class="p-4 bg-light">
-                    <?php
-                    $args = array(
-                      'child_of' => 2,
-                      'hide_empty' => 0
-                    );
-                    $categories = get_categories($args);
-                    foreach ( $categories as $platform ): ?>
-                        <?php echo '<a class="btn btn-secondary" href="#' . $platform->slug . '">' . $platform->name . '</a>' ?>
-                    <?php endforeach; ?>
-                </div>
-            </div>
+        <div class="row filters-inner">
+                <?php
+                $args = array(
+                  'child_of' => 2,
+                  'hide_empty' => 0
+                );
+                $categories = get_categories($args);
+                foreach ( $categories as $platform ): ?>
+                    <div class="col">
+                    <?php echo '<a class="btn bg-' . $platform->slug . '" href="#' . $platform->slug . '">' . $platform->name . '</a>' ?>
+                    </div>
+                <?php endforeach; ?>
         </div>
     </div>
 </section>
@@ -66,7 +64,7 @@
     <div class="container">
         <div class="row">
             <div class="col">
-                <h2>Facebook</h2>
+                <h2><img src="http://adformats.pixability.com/wp-content/uploads/2018/12/facebook-logo.png" alt="Facebook"> | Ad Formats</h2>
             </div>
         </div>
         <div class="row clearfix">
@@ -139,7 +137,7 @@
         </div>
         <div class="row"  id="youtube">
             <div class="col">
-                <h2>YouTube</h2>
+                <h2><img src="http://adformats.pixability.com/wp-content/uploads/2018/12/youtube-logo.png" alt=""> | Ad Formats</h2>
             </div>
         </div>
         <div class="row clearfix">
@@ -212,7 +210,7 @@
         </div>
         <div class="row" id="hulu">
             <div class="col">
-                <h2>Hulu</h2>
+                <img src="" alt=""> <h2>Hulu</h2>
             </div>
         </div>
         <div class="row clearfix">
@@ -286,7 +284,7 @@
         </div>
         <div class="row" id="instagram">
             <div class="col">
-                <h2>Instagram</h2>
+                <h2><img src="http://adformats.pixability.com/wp-content/uploads/2018/12/instagram-logo.png" alt="Instagram"> | Adformats</h2>
             </div>
         </div>
         <div class="row">
@@ -360,7 +358,7 @@
         </div>
         <div class="row" id="amazon">
             <div class="col">
-                <h2>Amazon</h2>
+                <img src="" alt=""> <h2>Amazon</h2>
             </div>
         </div>
         <div class="row">
@@ -434,7 +432,7 @@
         </div>
         <div class="row" id="roku">
             <div class="col">
-                <h2>Roku</h2>
+                <img src="" alt=""> <h2>Roku</h2>
             </div>
         </div>
         <div class="row">
@@ -508,7 +506,7 @@
         </div>
         <div class="row" id="snapchat">
             <div class="col">
-                <h2>Snapchat</h2>
+                <img src="" alt=""> <h2>Snapchat</h2>
             </div>
         </div>
         <div class="row">
@@ -582,7 +580,7 @@
         </div>
         <div class="row" id="spotx">
             <div class="col">
-                <h2>SpotX</h2>
+                <img src="" alt=""> <h2>SpotX</h2>
             </div>
         </div>
         <div class="row">
@@ -664,5 +662,7 @@
         </div>
     </div>
 </section>
+
+<a class="back-to-top" href="#hero">Back to top</a>
 
 <?php get_footer(); ?>
