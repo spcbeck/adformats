@@ -1,35 +1,80 @@
 .bg-youtube {
 	background-color: rgba($youtube-red, .3);
+	transition: background-color .3s ease-in-out;
+
+	&:hover {
+		background-color: $youtube-red;
+	}
 }
 
 .bg-amazon {
 	background-color: rgba($amazon-orange, .3);
+	transition: background-color .3s ease-in-out;
+
+	&:hover {
+		background-color: $amazon-orange;
+	}
 }
 
 .bg-facebook {
 	background-color: rgba($facebook-blue, .3);
+	transition: background-color .3s ease-in-out;
+
+	&:hover {
+		background-color: $facebook-blue;
+	}
 }
 
 .bg-spotx {
 	background-color: rgba($spotx-green, .3);
+	transition: background-color .3s ease-in-out;
+
+	&:hover {
+		background-color: $spotx-green;
+	}
 }
 
 .bg-twitter {
 	background-color: rgba($twitter-blue, .3);
+	transition: background-color .3s ease-in-out;
+
+	&:hover {
+		background-color: $twitter-blue;
+	}
 }
 
 .bg-snapchat {
 	background-color: rgba($snapchat-yellow, .3);
+	transition: background-color .3s ease-in-out;
+
+	&:hover {
+		background-color: $snapchat-yellow;
+	}
 }
 
 .bg-hulu {
 	background-color: rgba($hulu-green, .3);
+	transition: background-color .3s ease-in-out;
+
+	&:hover {
+		background-color: $hulu-green;
+	}
 }
 
 .bg-roku {
 	background-color: rgba($roku-purple, .3);
+	transition: background-color .3s ease-in-out;
+
+	&:hover {
+		background-color: $roku-purple;
+	}
 }
 
 .bg-instagram {
 	background-color: rgba($instagram-purple, .3);
+	transition: background-color .3s ease-in-out;
+
+	&:hover {
+		background-color: $instagram-purple;
+	}
 }

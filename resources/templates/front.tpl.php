@@ -20,7 +20,7 @@
     <div class="hero <?php if(has_post_thumbnail()): ?>jarallax<?php endif; ?>">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-md-5 text-white">
+                <div class="col-md-7 text-white">
                     <h1 style="color: <?php echo $textColor; ?>"><?php the_field('title'); ?></h1>
                     <h2 style="color: <?php echo $textColor; ?>"><?php the_field('subtitle'); ?></h2>
                     <p><?php the_field('paragraph_text'); ?></p>
@@ -64,12 +64,6 @@
 
 <section class="section" id="facebook">
     <div class="container">
-        <div class="row">
-            <div class="col">
-                <h2><img src="http://adformats.pixability.com/wp-content/uploads/2018/12/facebook-logo.png" alt="Facebook"> | Ad Formats</h2>
-            </div>
-        </div>
-        <div class="row clearfix">
             <?php
                 $args = array(
                   'post_type' => 'adformat',
@@ -77,7 +71,17 @@
                 );
                 $loop = new WP_Query( $args );
 
+                $count = 0;
+
                 while ( $loop->have_posts() ) : $loop->the_post();?>
+                    <?php if($count == 0): ?>
+                        <div class="row">
+                            <div class="col">
+                                <h2><img src="http://adformats.pixability.com/wp-content/uploads/2018/12/facebook-logo.png" alt="Facebook"> | Ad Formats</h2>
+                            </div>
+                        </div>
+                        <div class="row clearfix">
+                    <?php endif; ?>
                     <div class="col-md-4">
                         <div class="card-flip">
                             <div class="flip">
@@ -134,15 +138,11 @@
                             </div>
                         </div>
                     </div>
+                    <?php if($count == 0): ?>
+                       </div>
+                    <?php endif; $count++; ?>
                 <?php endwhile; ?>
                 <?php wp_reset_query(); ?>
-        </div>
-        <div class="row"  id="youtube">
-            <div class="col">
-                <h2><img src="http://adformats.pixability.com/wp-content/uploads/2018/12/youtube-logo.png" alt=""> | Ad Formats</h2>
-            </div>
-        </div>
-        <div class="row clearfix">
             <?php
                 $args = array(
                   'post_type' => 'adformat',
@@ -150,7 +150,17 @@
                 );
                 $loop = new WP_Query( $args );
 
+                $count = 0;
+
                 while ( $loop->have_posts() ) : $loop->the_post();?>
+                    <?php if($count == 0): ?>
+                        <div class="row" id="youtube">
+                            <div class="col">
+                                <h2><img src="http://adformats.pixability.com/wp-content/uploads/2018/12/youtube-logo.png" alt=""> | Ad Formats</h2>
+                            </div>
+                        </div>
+                         <div class="row clearfix">
+                    <?php endif; ?>
                     <div class="col-md-4">
                         <div class="card-flip">
                             <div class="flip">
@@ -207,15 +217,11 @@
                             </div>
                         </div>
                     </div>
+                    <?php if($count == 0): ?>
+                       </div>
+                    <?php endif; $count++; ?>
                 <?php endwhile; ?>
                 <?php wp_reset_query(); ?>
-        </div>
-        <div class="row" id="hulu">
-            <div class="col">
-                <h2><img src="http://adformats.pixability.com/wp-content/uploads/2018/12/hulu-logo.png" alt="Hulu"> | Ad Formats</h2>
-            </div>
-        </div>
-        <div class="row clearfix">
             <?php
                 $args = array(
                   'post_type' => 'adformat',
@@ -223,7 +229,18 @@
                 );
                 $loop = new WP_Query( $args );
 
+                $count = 0;
+
                 while ( $loop->have_posts() ) : $loop->the_post();?>
+                    <?php if($count == 0): ?>
+                        <div class="row" id="hulu">
+                            <div class="col">
+                                <h2><img src="http://adformats.pixability.com/wp-content/uploads/2018/12/hulu-logo.png" alt="Hulu"> | Ad Formats</h2>
+                            </div>
+                        </div>
+                        <div class="row clearfix">
+
+                    <?php endif; ?>
                     <div class="col-md-4">
                         <div class="card-flip">
                             <div class="flip">
@@ -281,15 +298,11 @@
                             </div>
                         </div>
                     </div>
+                    <?php if($count == 0): ?>
+                       </div>
+                    <?php endif; ?>
                 <?php endwhile; ?>
                 <?php wp_reset_query(); ?>
-        </div>
-        <div class="row" id="instagram">
-            <div class="col">
-                <h2><img src="http://adformats.pixability.com/wp-content/uploads/2018/12/instagram-logo.png" alt="Instagram"> | Ad Formats</h2>
-            </div>
-        </div>
-        <div class="row">
             <?php
                 $args = array(
                   'post_type' => 'adformat',
@@ -297,7 +310,17 @@
                 );
                 $loop = new WP_Query( $args );
 
+                $count = 0;
+
                 while ( $loop->have_posts() ) : $loop->the_post();?>
+                    <?php if($count == 0): ?>
+                    <div class="row" id="instagram">
+                        <div class="col">
+                            <h2><img src="http://adformats.pixability.com/wp-content/uploads/2018/12/instagram-logo.png" alt="Instagram"> | Ad Formats</h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                    <?php endif; ?>
                     <div class="col-md-4">
                         <div class="card-flip">
                             <div class="flip">
@@ -355,15 +378,11 @@
                             </div>
                         </div>
                     </div>
+                    <?php if($count == 0): ?>
+                       </div>
+                    <?php endif; $count++; ?>
                 <?php endwhile; ?>
                 <?php wp_reset_query(); ?>
-        </div>
-        <div class="row" id="amazon">
-            <div class="col">
-                <img src="" alt=""> <h2>Amazon</h2>
-            </div>
-        </div>
-        <div class="row">
             <?php
                 $args = array(
                   'post_type' => 'adformat',
@@ -371,7 +390,17 @@
                 );
                 $loop = new WP_Query( $args );
 
+                $count = 0;
+
                 while ( $loop->have_posts() ) : $loop->the_post();?>
+                     <?php if($count == 0): ?>
+                        <div class="row" id="amazon">
+                            <div class="col">
+                                <img src="" alt=""> <h2>Amazon</h2>
+                            </div>
+                        </div>
+                        <div class="row">
+                    <?php endif; ?>
                     <div class="col-md-4">
                         <div class="card-flip">
                             <div class="flip">
@@ -429,23 +458,28 @@
                             </div>
                         </div>
                     </div>
+                    <?php if($count == 0): ?>
+                       </div>
+                    <?php endif; $count++; ?>
                 <?php endwhile; ?>
-                <?php wp_reset_query(); ?>
-        </div>
-        <div class="row" id="roku">
-            <div class="col">
-                <img src="" alt=""> <h2>Roku</h2>
-            </div>
-        </div>
-        <div class="row">
-            <?php
+                <?php wp_reset_query();
                 $args = array(
                   'post_type' => 'adformat',
                   'category_name' => 'roku'
                 );
                 $loop = new WP_Query( $args );
 
+                $count = 0;
+
                 while ( $loop->have_posts() ) : $loop->the_post();?>
+                    <?php if($count == 0): ?>
+                        <div class="row" id="amazon">
+                            <div class="col">
+                                <img src="" alt="Roku"> <h2>Ad Formats</h2>
+                            </div>
+                        </div>
+                        <div class="row">
+                    <?php endif; ?>
                     <div class="col-md-4">
                         <div class="card-flip">
                             <div class="flip">
@@ -503,23 +537,30 @@
                             </div>
                         </div>
                     </div>
+                    <?php if($count == 0): ?>
+                       </div>
+                    <?php endif; $count ++; ?>
                 <?php endwhile; ?>
                 <?php wp_reset_query(); ?>
-        </div>
-        <div class="row" id="snapchat">
-            <div class="col">
-                <img src="" alt=""> <h2>Snapchat</h2>
-            </div>
-        </div>
-        <div class="row">
             <?php
                 $args = array(
                   'post_type' => 'adformat',
                   'category_name' => 'snapchat'
                 );
+
+                $count = 0;
+
                 $loop = new WP_Query( $args );
 
                 while ( $loop->have_posts() ) : $loop->the_post();?>
+                    <?php if($count == 0): ?>
+                    <div class="row" id="snapchat">
+                        <div class="col">
+                            <img src="" alt=""> <h2>Snapchat</h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                    <?php endif ?>
                     <div class="col-md-4">
                         <div class="card-flip">
                             <div class="flip">
@@ -577,15 +618,11 @@
                             </div>
                         </div>
                     </div>
+                    <?php if($count == 0): ?>
+                       </div>
+                    <?php endif; $count++; ?>
                 <?php endwhile; ?>
                 <?php wp_reset_query(); ?>
-        </div>
-        <div class="row" id="spotx">
-            <div class="col">
-                <img src="" alt=""> <h2>SpotX</h2>
-            </div>
-        </div>
-        <div class="row">
             <?php
                 $args = array(
                   'post_type' => 'adformat',
@@ -594,6 +631,14 @@
                 $loop = new WP_Query( $args );
 
                 while ( $loop->have_posts() ) : $loop->the_post();?>
+                    <?php if($count == 0): ?>
+                    <div class="row" id="spotx">
+                        <div class="col">
+                            <img src="" alt=""> <h2>SpotX</h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                    <?php endif; ?>
                     <div class="col-md-4">
                         <div class="card-flip">
                             <div class="flip">
@@ -651,9 +696,11 @@
                             </div>
                         </div>
                     </div>
+                    <?php if($count == 0): ?>
+                       </div>
+                    <?php endif; $count++; ?>
                 <?php endwhile; ?>
                 <?php wp_reset_query(); ?>
-        </div>
         <div class="row">
             <div class="col">
                 <?php if (have_posts()) : ?>
