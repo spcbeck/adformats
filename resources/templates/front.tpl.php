@@ -138,10 +138,11 @@
                             </div>
                         </div>
                     </div>
-                    <?php if($count == 0): ?>
-                       </div>
-                    <?php endif; $count++; ?>
+                    <?php $count++; ?>
                 <?php endwhile; ?>
+                <?php if($loop->have_posts()): ?>
+                   </div>
+                <?php endif; ?>
                 <?php wp_reset_query(); ?>
             <?php
                 $args = array(
@@ -217,10 +218,11 @@
                             </div>
                         </div>
                     </div>
-                    <?php if($count == 0): ?>
-                       </div>
-                    <?php endif; $count++; ?>
+                    <?php $count++; ?>
                 <?php endwhile; ?>
+                <?php if($loop->have_posts()): ?>
+                   </div>
+                <?php endif; ?>
                 <?php wp_reset_query(); ?>
             <?php
                 $args = array(
@@ -239,7 +241,6 @@
                             </div>
                         </div>
                         <div class="row clearfix">
-
                     <?php endif; ?>
                     <div class="col-md-4">
                         <div class="card-flip">
@@ -298,10 +299,11 @@
                             </div>
                         </div>
                     </div>
-                    <?php if($count == 0): ?>
-                       </div>
-                    <?php endif; ?>
+                    <?php $count++; ?>
                 <?php endwhile; ?>
+                <?php if($loop->have_posts()): ?>
+                   </div>
+                <?php endif; ?>
                 <?php wp_reset_query(); ?>
             <?php
                 $args = array(
@@ -378,11 +380,12 @@
                             </div>
                         </div>
                     </div>
-                    <?php if($count == 0): ?>
-                       </div>
-                    <?php endif; $count++; ?>
+                    <?php $count++; ?>
                 <?php endwhile; ?>
                 <?php wp_reset_query(); ?>
+                <?php if($loop->have_posts()): ?>
+                   </div>
+                <?php endif; ?>
             <?php
                 $args = array(
                   'post_type' => 'adformat',
@@ -458,10 +461,11 @@
                             </div>
                         </div>
                     </div>
-                    <?php if($count == 0): ?>
-                       </div>
-                    <?php endif; $count++; ?>
+                    <?php $count++; ?>
                 <?php endwhile; ?>
+                <?php if($loop->have_posts()): ?>
+                   </div>
+                <?php endif; ?>
                 <?php wp_reset_query();
                 $args = array(
                   'post_type' => 'adformat',
@@ -537,10 +541,11 @@
                             </div>
                         </div>
                     </div>
-                    <?php if($count == 0): ?>
-                       </div>
-                    <?php endif; $count ++; ?>
+                    <?php $count ++; ?>
                 <?php endwhile; ?>
+                <?php if($loop->have_posts()): ?>
+                   </div>
+                <?php endif; ?>
                 <?php wp_reset_query(); ?>
             <?php
                 $args = array(
@@ -618,10 +623,11 @@
                             </div>
                         </div>
                     </div>
-                    <?php if($count == 0): ?>
-                       </div>
-                    <?php endif; $count++; ?>
+                    <?php $count++; ?>
                 <?php endwhile; ?>
+                <?php if($loop->have_posts()): ?>
+                   </div>
+                <?php endif; ?>
                 <?php wp_reset_query(); ?>
             <?php
                 $args = array(
@@ -696,10 +702,11 @@
                             </div>
                         </div>
                     </div>
-                    <?php if($count == 0): ?>
-                       </div>
-                    <?php endif; $count++; ?>
+                    <?php $count++; ?>
                 <?php endwhile; ?>
+                <?php if($loop->have_posts()): ?>
+                   </div>
+                <?php endif; ?>
                 <?php wp_reset_query(); ?>
         <div class="row">
             <div class="col">
