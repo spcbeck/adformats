@@ -348,6 +348,8 @@ h2 {
 
 .adformat img {
   height: auto;
+  max-height: 250px;
+  object-fit: contain;
 }
 
 .back {
