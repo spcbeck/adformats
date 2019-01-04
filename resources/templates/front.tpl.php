@@ -1,4 +1,5 @@
-<?php get_header(); ?>
+<?php global $post;
+get_header(); ?>
 
 
 <?php
@@ -43,7 +44,7 @@
         <img class="jarallax-img" src="<?php the_post_thumbnail_url( 'large' ); ?>"/>
     </div>
 </section>
-
+<?php if ( !post_password_required( $post )) { ?>
 <section class="filters">
     <div class="container">
         <div class="row filters-inner">
@@ -712,7 +713,7 @@
             <div class="col">
                 <?php if (have_posts()) : ?>
                     <?php while (have_posts()) : the_post() ?>
-                        <?php the_content() ?>
+
                     <?php endwhile; ?>
                 <?php endif; ?>
             </div>
@@ -721,5 +722,15 @@
 </section>
 
 <a class="back-to-top" href="#hero">Back to top</a>
+
+<?php } else {
+    // we will show password form here
+    echo '<section>';
+    echo '<div class="container">';
+    echo get_the_password_form();
+    echo '</div></section>';
+
+} ?>
+
 
 <?php get_footer(); ?>
