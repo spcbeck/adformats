@@ -354,6 +354,10 @@ h2 {
 
 .back {
   border-top: 10px solid $red;
+
+  .card-body {
+    overflow-y: auto;
+  }
 }
 
 .card {
