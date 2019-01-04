@@ -77,7 +77,7 @@
                     <?php if($count == 0): ?>
                         <div class="row">
                             <div class="col">
-                                <h2><img src="http://adformats.pixability.com/wp-content/uploads/2018/12/facebook-logo.png" alt="Facebook"> | Ad Formats</h2>
+                                <h2><img src="https://adformats.pixability.com/wp-content/uploads/2018/12/facebook-logo.png" alt="Facebook"> | Ad Formats</h2>
                             </div>
                         </div>
                         <div class="row clearfix">
@@ -157,7 +157,7 @@
                     <?php if($count == 0): ?>
                         <div class="row" id="youtube">
                             <div class="col">
-                                <h2><img src="http://adformats.pixability.com/wp-content/uploads/2018/12/youtube-logo.png" alt=""> | Ad Formats</h2>
+                                <h2><img src="https://adformats.pixability.com/wp-content/uploads/2018/12/youtube-logo.png" alt=""> | Ad Formats</h2>
                             </div>
                         </div>
                          <div class="row clearfix">
@@ -237,7 +237,7 @@
                     <?php if($count == 0): ?>
                         <div class="row" id="hulu">
                             <div class="col">
-                                <h2><img src="http://adformats.pixability.com/wp-content/uploads/2018/12/hulu-logo.png" alt="Hulu"> | Ad Formats</h2>
+                                <h2><img src="https://adformats.pixability.com/wp-content/uploads/2018/12/hulu-logo.png" alt="Hulu"> | Ad Formats</h2>
                             </div>
                         </div>
                         <div class="row clearfix">
@@ -318,7 +318,7 @@
                     <?php if($count == 0): ?>
                     <div class="row" id="instagram">
                         <div class="col">
-                            <h2><img src="http://adformats.pixability.com/wp-content/uploads/2018/12/instagram-logo.png" alt="Instagram"> | Ad Formats</h2>
+                            <h2><img src="https://adformats.pixability.com/wp-content/uploads/2018/12/instagram-logo.png" alt="Instagram"> | Ad Formats</h2>
                         </div>
                     </div>
                     <div class="row">
