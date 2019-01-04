@@ -357,7 +357,7 @@ h2 {
 .card {
   border-radius: 0;
   box-shadow: 0 0 20px rgba(#000,.1);
-  margin-bottom: 4rem;
+  height: 100%;
 
   h3 {
     font-size: 1.75rem;
@@ -382,6 +382,11 @@ h2 {
   perspective: 1000px;
   &.hover .flip {
     transform: rotateY(180deg);
+  }
+
+  > .flip,
+  .card {
+    height: 550px;
   }
 }
 
@@ -488,4 +493,8 @@ h2 {
   white-space: nowrap;
   overflow: hidden;
   width: 51px;
+}
+
+.col-md-4 {
+  margin-bottom: 4rem;
 }
