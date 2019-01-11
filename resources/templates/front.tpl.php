@@ -106,7 +106,6 @@ get_header(); ?>
                                     <div class="card">
                                         <div class="card-body">
                                             <h3><?php the_title(); ?></h3>
-                                            <hr>
                                             <div class="categoryparents">
                                                 <?php
                                                 $args = array(
@@ -186,7 +185,6 @@ get_header(); ?>
                                     <div class="card">
                                         <div class="card-body">
                                             <h3><?php the_title(); ?></h3>
-                                            <hr>
                                             <div class="categoryparents">
                                                 <?php
                                                 $args = array(
@@ -266,7 +264,6 @@ get_header(); ?>
                                     <div class="card">
                                         <div class="card-body">
                                             <h3><?php the_title(); ?></h3>
-                                            <hr>
                                             <div class="categoryparents">
                                                 <?php
                                                 $args = array(
@@ -347,7 +344,6 @@ get_header(); ?>
                                     <div class="card">
                                         <div class="card-body">
                                             <h3><?php the_title(); ?></h3>
-                                            <hr>
                                             <div class="categoryparents">
                                                 <?php
                                                 $args = array(
@@ -428,7 +424,6 @@ get_header(); ?>
                                     <div class="card">
                                         <div class="card-body">
                                             <h3><?php the_title(); ?></h3>
-                                            <hr>
                                             <div class="categoryparents">
                                                 <?php
                                                 $args = array(
@@ -508,7 +503,6 @@ get_header(); ?>
                                     <div class="card">
                                         <div class="card-body">
                                             <h3><?php the_title(); ?></h3>
-                                            <hr>
                                             <div class="categoryparents">
                                                 <?php
                                                 $args = array(
@@ -590,7 +584,6 @@ get_header(); ?>
                                     <div class="card">
                                         <div class="card-body">
                                             <h3><?php the_title(); ?></h3>
-                                            <hr>
                                             <div class="categoryparents">
                                                 <?php
                                                 $args = array(
@@ -669,7 +662,6 @@ get_header(); ?>
                                     <div class="card">
                                         <div class="card-body">
                                             <h3><?php the_title(); ?></h3>
-                                            <hr>
                                             <div class="categoryparents">
                                                 <?php
                                                 $args = array(
