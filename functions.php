@@ -160,7 +160,7 @@ function ad_filter_function(){
 	if( $query->have_posts() ) {
     foreach ( $categories as $platform ) {
       if(0 != $platform->count)
-        echo '<div class="row" id="' . $platform->name . '"><div class="col"><h2><img src="' . get_template_directory_uri() . '/resources/assets/images/' . $platform->name . '-logo.png" alt="' . $platform->name . '"> | Ad Formats</h2></div></div><div class="row adformat-cards">';
+        echo '<div class="row" id="' . $platform->name . '"><div class="col"><h2><img src="' . get_template_directory_uri() . '/resources/assets/images/' . strtolower($platform->name) . '-logo.png" alt="' . $platform->name . '"> | Ad Formats</h2></div></div><div class="row adformat-cards">';
   		while( $query->have_posts() ){
          $query->the_post();
           if(has_category($platform->name)) {
