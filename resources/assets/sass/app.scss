@@ -346,6 +346,10 @@ h2 {
   }
 }
 
+.adformat {
+  overflow: hidden;
+}
+
 .adformat img {
   height: auto;
   max-height: 230px;
@@ -465,11 +469,45 @@ h2 {
   background-color: #f5f4f5;
   margin: 4rem auto;
   padding: 2rem 2rem 1rem;
-  width: 80%;
+
+  h3 {
+    background-color: #CDCBCF;
+    color: $purple;
+    display: inline-block;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: .5rem 1rem;
+    text-transform: uppercase;
+    width: max-content;
+  }
+
+  label.form-check {
+    color: #55505D;
+    font-size: .9rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin: 1.5rem 0;
+    padding-left: 3rem;
+    text-indent: -2.2em;
+    text-transform: uppercase;
+
+    input {
+      appearance: none;
+      background-color: transparent;
+      margin-right: 1rem;
+      border: 1px solid $purple;
+      height: 16px;
+      position: relative;
+      top: 3px;
+      width: 16px;
+
+      &:checked {
+        background-color: $purple;
+      }
+    }
+  }
 
   .col {
-    flex: 0;
-    flex-basis: 20%;
     margin-bottom: 1rem;
 
     &:nth-child(4n+1) {
@@ -507,4 +545,10 @@ h2 {
 
 .col-md-4 {
   margin-bottom: 4rem;
+}
+
+@media (min-width: 1400px) {
+  .container {
+      max-width: 1380px;
+  }
 }
