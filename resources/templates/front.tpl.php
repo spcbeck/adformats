@@ -57,7 +57,7 @@ get_header(); ?>
               );
               $categories = get_categories($args);
               foreach ( $categories as $platform ): ?>
-                    <?php echo '<label class="form-check"><input type="checkbox" name="platforms[]" value="' . $platform->term_id . '" />' . $platform->name . '</label>' ?>
+                    <?php echo '<label class="form-check"><input type="checkbox" name="platforms[]" value="' . $platform->term_taxonomy_id . '" />' . $platform->name . '</label>' ?>
               <?php endforeach; ?>
             </div>
             <div class="col">
@@ -69,7 +69,7 @@ get_header(); ?>
               );
               $categories = get_categories($args);
               foreach ( $categories as $length ): ?>
-                    <?php echo '<label class="form-check"><input type="checkbox" name="length[]" value="' . $length->term_id . '" />' . $length->name . '</label>' ?>
+                    <?php echo '<label class="form-check"><input type="checkbox" name="length[]" value="' . $length->term_taxonomy_id . '" />' . $length->name . '</label>' ?>
               <?php endforeach; ?>
             </div>
             <div class="col">
@@ -81,7 +81,7 @@ get_header(); ?>
               );
               $categories = get_categories($args);
               foreach ( $categories as $kpi ): ?>
-                    <?php echo '<label class="form-check"><input type="checkbox" name="kpi[]" value="' . $kpi->term_id . '" />' . $kpi->name . '</label>' ?>
+                    <?php echo '<label class="form-check"><input type="checkbox" name="kpi[]" value="' . $kpi->term_taxonomy_id . '" />' . $kpi->name . '</label>' ?>
               <?php endforeach; ?>
             </div>
             <div class="col">
@@ -93,7 +93,7 @@ get_header(); ?>
               );
               $categories = get_categories($args);
               foreach ( $categories as $pricedas): ?>
-                    <?php echo '<label class="form-check"><input type="checkbox" name="pricedas[]" value="' . $pricedas->term_id . '" />' . $pricedas->name . '</label>' ?>
+                    <?php echo '<label class="form-check"><input type="checkbox" name="pricedas[]" value="' . $pricedas->term_taxonomy_id . '" />' . $pricedas->name . '</label>' ?>
               <?php endforeach; ?>
             </div>
             <div class="col">
@@ -105,7 +105,7 @@ get_header(); ?>
               );
               $categories = get_categories($args);
               foreach ( $categories as $skippable ): ?>
-                    <?php echo '<label class="form-check"><input type="checkbox" name="skippable[]" value="' . $skippable->term_id . '" />' . $skippable->name . '</label>' ?>
+                    <?php echo '<label class="form-check"><input type="checkbox" name="skippable[]" value="' . $skippable->term_taxonomy_id . '" />' . $skippable->name . '</label>' ?>
               <?php endforeach; ?>
             </div>
             <div class="col">
@@ -117,7 +117,7 @@ get_header(); ?>
               );
               $categories = get_categories($args);
               foreach ( $categories as $targeting ): ?>
-                    <?php echo '<label class="form-check"><input type="checkbox" name="targeting[]" value="' . $targeting->term_id . '" />' . $targeting->name . '</label>' ?>
+                    <?php echo '<label class="form-check"><input type="checkbox" name="targeting[]" value="' . $targeting->term_taxonomy_id . '" />' . $targeting->name . '</label>' ?>
               <?php endforeach; ?>
             </div>
 	          <input type="hidden" name="action" value="myfilter">

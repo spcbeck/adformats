@@ -53,9 +53,11 @@ function ad_filter_function(){
     $platforms = [];
 
     foreach ($_POST['platforms'] as $key => $value) {
+
+      echo $value;
       $platform = array(
         'taxonomy' => 'category',
-				'field' => 'term_id',
+				'field' => 'term_taxonomy_id',
 				'terms' => $value
       );
 
@@ -71,7 +73,7 @@ function ad_filter_function(){
     foreach ($_POST['length'] as $key => $value) {
       $length = array(
         'taxonomy' => 'category',
-				'field' => 'term_id',
+				'field' => 'term_taxonomy_id',
 				'terms' => $value
       );
 
@@ -87,7 +89,7 @@ function ad_filter_function(){
     foreach ($_POST['kpi'] as $key => $value) {
       $kpi = array(
         'taxonomy' => 'category',
-				'field' => 'term_id',
+				'field' => 'term_taxonomy_id',
 				'terms' => $value
       );
 
@@ -103,7 +105,7 @@ function ad_filter_function(){
     foreach ($_POST['pricedas'] as $key => $value) {
       $pricedas = array(
         'taxonomy' => 'category',
-				'field' => 'term_id',
+				'field' => 'term_taxonomy_id',
 				'terms' => $value
       );
 
@@ -119,7 +121,7 @@ function ad_filter_function(){
     foreach ($_POST['skippable'] as $key => $value) {
       $skippable = array(
         'taxonomy' => 'category',
-				'field' => 'term_id',
+				'field' => 'term_taxonomy_id',
 				'terms' => $value
       );
 
@@ -135,7 +137,7 @@ function ad_filter_function(){
     foreach ($_POST['targeting'] as $key => $value) {
       $targeting = array(
         'taxonomy' => 'category',
-				'field' => 'term_id',
+				'field' => 'term_taxonomy_id',
 				'terms' => $value
       );
 
