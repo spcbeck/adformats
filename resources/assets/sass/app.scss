@@ -494,20 +494,20 @@ h2 {
     input {
       appearance: none;
       background-color: transparent;
+      background-repeat: no-repeat;
+      background-size: 70%;
+      background-position: center center;
       margin-right: 1rem;
       border: 1px solid $purple;
       height: 16px;
       position: relative;
-      transition: all .3s ease-in-out;
+      transition: background-color .3s ease-in-out;
       top: 3px;
       width: 16px;
 
       &:checked {
         background-color: $purple;
         background-image: url('../images/check.svg');
-        background-repeat: no-repeat;
-        background-size: 70%;
-        background-position: center center;
       }
     }
   }
