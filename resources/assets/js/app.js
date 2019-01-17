@@ -31,6 +31,7 @@ $(document).ready(function() {
       },
       success:function(data){
         $('#response').html(data); // insert data
+        console.log(data);
         $('.adformat-cards').each(function() {
           if(!$.trim($(this).html())) {
             $(this).prev().hide();
@@ -44,8 +45,6 @@ $(document).ready(function() {
     });
     return false;
   });
-
-  $('#filter').submit();
 
   $('#filter').submit();
 

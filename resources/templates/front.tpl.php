@@ -125,7 +125,7 @@ get_header(); ?>
     </div>
 </section>
 
-<section class="section" id="facebook">
+<section class="section">
     <div class="container">
       <div id="response"></div>
 
