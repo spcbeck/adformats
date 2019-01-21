@@ -49,100 +49,111 @@ function ad_filter_function(){
     'relation' => 'AND'
   );
 
+  //TODO refactor so we just loop through the post object: https://stackoverflow.com/questions/5479999/foreach-value-from-post-from-form
   if( isset( $_POST['platforms'] ) ){
     $platforms = [];
+    $term_array = [];
 
     foreach ($_POST['platforms'] as $key => $value) {
-
-      echo $value;
-      $platform = array(
-        'taxonomy' => 'category',
-				'field' => 'term_taxonomy_id',
-				'terms' => $value
-      );
-
-      array_push($platforms, $platform);
+      array_push($term_array, $value);
     }
+
+    $platforms = array(
+      'relation' => 'OR',
+      'taxonomy' => 'category',
+      'field' => 'term_taxonomy_id',
+      'terms' => $term_array
+    );
 
     array_push($categories, $platforms);
   }
   // for taxonomies / categories
 	if( isset( $_POST['length'] ) ){
     $lengths = [];
+    $term_array = [];
 
     foreach ($_POST['length'] as $key => $value) {
-      $length = array(
-        'taxonomy' => 'category',
-				'field' => 'term_taxonomy_id',
-				'terms' => $value
-      );
-
-      array_push($lengths, $length);
+      array_push($term_array, $value);
     }
+
+    $lengths = array(
+      'relation' => 'OR',
+      'taxonomy' => 'category',
+      'field' => 'term_taxonomy_id',
+      'terms' => $term_array
+    );
 
     array_push($categories, $lengths);
   }
   // for taxonomies / categories
 	if( isset( $_POST['kpi'] ) ){
     $kpis = [];
+    $term_array = [];
 
     foreach ($_POST['kpi'] as $key => $value) {
-      $kpi = array(
-        'taxonomy' => 'category',
-				'field' => 'term_taxonomy_id',
-				'terms' => $value
-      );
-
-      array_push($kpis, $kpi);
+      array_push($term_array, $value);
     }
+
+    $kpis = array(
+      'relation' => 'OR',
+      'taxonomy' => 'category',
+      'field' => 'term_taxonomy_id',
+      'terms' => $term_array
+    );
 
     array_push($categories, $kpis);
   }
   // for taxonomies / categories
 	if( isset( $_POST['pricedas'] ) ){
     $pricedases = [];
+    $term_array = [];
 
     foreach ($_POST['pricedas'] as $key => $value) {
-      $pricedas = array(
-        'taxonomy' => 'category',
-				'field' => 'term_taxonomy_id',
-				'terms' => $value
-      );
-
-      array_push($pricedases, $pricedas);
+      array_push($term_array, $value);
     }
+
+    $pricedases = array(
+      'relation' => 'OR',
+      'taxonomy' => 'category',
+      'field' => 'term_taxonomy_id',
+      'terms' => $term_array
+    );
 
     array_push($categories, $pricedases);
   }
   // for taxonomies / categories
 	if( isset( $_POST['skippable'] ) ){
     $skippables = [];
+    $term_array = [];
 
     foreach ($_POST['skippable'] as $key => $value) {
-      $skippable = array(
-        'taxonomy' => 'category',
-				'field' => 'term_taxonomy_id',
-				'terms' => $value
-      );
-
-      array_push($skippables, $skippable);
+      array_push($term_array, $value);
     }
+
+    $skippables = array(
+      'relation' => 'OR',
+      'taxonomy' => 'category',
+      'field' => 'term_taxonomy_id',
+      'terms' => $term_array
+    );
 
     array_push($categories, $skippables);
   }
   // for taxonomies / categories
 	if( isset( $_POST['targeting'] ) ){
     $targetings = [];
+    $term_array = [];
 
     foreach ($_POST['targeting'] as $key => $value) {
-      $targeting = array(
-        'taxonomy' => 'category',
-				'field' => 'term_taxonomy_id',
-				'terms' => $value
-      );
-
-      array_push($targetings, $target);
+      array_push($term_array, $value);
     }
+
+    $targetings = array(
+      'relation' => 'OR',
+      'taxonomy' => 'category',
+      'field' => 'term_taxonomy_id',
+      'terms' => $term_array
+    );
 
     array_push($categories, $targetings);
   }
