@@ -43,6 +43,7 @@ function ad_filter_function(){
 
 	$args = array(
 		'post_type' => 'adformat',
+    'posts_per_page' => -1
 	);
 
   $categories = array(
@@ -59,9 +60,8 @@ function ad_filter_function(){
     }
 
     $platforms = array(
-      'relation' => 'OR',
       'taxonomy' => 'category',
-      'field' => 'term_taxonomy_id',
+      'field' => 'term_id',
       'terms' => $term_array
     );
 
@@ -77,9 +77,8 @@ function ad_filter_function(){
     }
 
     $lengths = array(
-      'relation' => 'OR',
       'taxonomy' => 'category',
-      'field' => 'term_taxonomy_id',
+      'field' => 'term_id',
       'terms' => $term_array
     );
 
@@ -95,9 +94,8 @@ function ad_filter_function(){
     }
 
     $kpis = array(
-      'relation' => 'OR',
       'taxonomy' => 'category',
-      'field' => 'term_taxonomy_id',
+      'field' => 'term_id',
       'terms' => $term_array
     );
 
@@ -113,9 +111,8 @@ function ad_filter_function(){
     }
 
     $pricedases = array(
-      'relation' => 'OR',
       'taxonomy' => 'category',
-      'field' => 'term_taxonomy_id',
+      'field' => 'term_id',
       'terms' => $term_array
     );
 
@@ -131,9 +128,8 @@ function ad_filter_function(){
     }
 
     $skippables = array(
-      'relation' => 'OR',
       'taxonomy' => 'category',
-      'field' => 'term_taxonomy_id',
+      'field' => 'term_id',
       'terms' => $term_array
     );
 
@@ -149,9 +145,8 @@ function ad_filter_function(){
     }
 
     $targetings = array(
-      'relation' => 'OR',
       'taxonomy' => 'category',
-      'field' => 'term_taxonomy_id',
+      'field' => 'term_id',
       'terms' => $term_array
     );
 
