@@ -73,6 +73,30 @@ get_header(); ?>
               <?php endforeach; ?>
             </div>
             <div class="col">
+              <h3>Measurement</h3>
+              <?php
+                $args = array(
+                  'child_of' => 39,
+                  'hide_empty' => 0
+                );
+                $categories = get_categories($args);
+                foreach ( $categories as $platform ): ?>
+                      <?php echo '<label class="form-check"><input type="checkbox" name="platforms[]" value="' . $platform->term_taxonomy_id . '" />' . $platform->name . '</label>' ?>
+                <?php endforeach; ?>
+              </div>
+              <div class="col">
+                <h3>Ad Length</h3>
+                <?php
+                $args = array(
+                  'child_of' => 12,
+                  'hide_empty' => 0
+                );
+                $categories = get_categories($args);
+                foreach ( $categories as $length ): ?>
+                      <?php echo '<label class="form-check"><input type="checkbox" name="length[]" value="' . $length->term_taxonomy_id . '" />' . $length->name . '</label>' ?>
+                <?php endforeach; ?>
+              </div>
+            <div class="col">
               <h3>KPI/Objectives</h3>
               <?php
               $args = array(
