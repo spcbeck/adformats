@@ -111,7 +111,7 @@ get_header(); ?>
               <?php endforeach; ?>
             </div>
             <div class="col">
-              <h3>Skippable</h3>
+              <h3>Options</h3>
               <?php
               $args = array(
                 'child_of' => 32,
