@@ -85,6 +85,23 @@ function ad_filter_function(){
     array_push($categories, $lengths);
   }
   // for taxonomies / categories
+	if( isset( $_POST['measurement'] ) ){
+    $measurements = [];
+    $term_array = [];
+
+    foreach ($_POST['measurement'] as $key => $value) {
+      array_push($term_array, $value);
+    }
+
+    $measurements = array(
+      'taxonomy' => 'category',
+      'field' => 'term_id',
+      'terms' => $term_array
+    );
+
+    array_push($categories, $measurements);
+  }
+  // for taxonomies / categories
 	if( isset( $_POST['kpi'] ) ){
     $kpis = [];
     $term_array = [];

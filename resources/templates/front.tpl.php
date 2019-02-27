@@ -82,8 +82,8 @@ get_header(); ?>
                   'hide_empty' => 0
                 );
                 $categories = get_categories($args);
-                foreach ( $categories as $platform ): ?>
-                      <?php echo '<label class="form-check"><input type="checkbox" name="platforms[]" value="' . $platform->term_id . '" />' . $platform->name . '</label>' ?>
+                foreach ( $categories as $measurement ): ?>
+                      <?php echo '<label class="form-check"><input type="checkbox" name="measurement[]" value="' . $measurement->term_id . '" />' . $measurement->name . '</label>' ?>
                 <?php endforeach; ?>
               </div>
             <div class="col">
