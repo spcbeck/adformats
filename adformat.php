@@ -46,8 +46,10 @@
                             <?php
                                 endforeach;
                             ?>
-                            <h4>Other</h4>
-                            <p><?php the_field('other'); ?></p>
+                            <?php if( get_field('other') ): ?>
+                                <h4>Other</h4>
+                                <p><?php the_field('other'); ?></p>
+                            <?php endif; ?>
                         </div>
                     </div>
                 </div>
